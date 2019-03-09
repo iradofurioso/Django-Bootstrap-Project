@@ -1,1 +1,1 @@
-# Django Bootstrap Project
+# py Django Bootstrap Project

@@ -82,13 +82,20 @@ $ python manage.py createsuperuser
 
 ## Framework configuration 
 
-The above actions is the necessary commands to get application running. However, if you try to access in your web browser you will face some errors. This is due to missing information in settings.py and Boot.py. 
+The above actions is the necessary commands to get application running. However, if you try to access in your web browser you will face some errors. This is due to missing information in settings.py and Boot.py. Be aware that this template loads the Decouple module so you don't necessarily need to edit setting.py but only the .env file. First of all change the name of the file:
 
-**settings.py**
-```py
-ALLOWED_HOSTS = [
-    '.YOURDEVDOMAINHERE.dev.br'
-]
+```sh
+$ mv .env.example .env
+```
+Then edit the .env file with your project configuration information. 
+
+**.env**
+```txt
+ALLOWED_HOSTS=.mydomain.com
+SECRET_KEY=<YOUR SECRETE KEY>
+DEBUG=True
+LANGUAGE_CODE=pt-br
+TIME_ZONE=America/Sao_Paulo
 ```
 
 **Boot.py**
